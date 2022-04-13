@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+}
+.articulo{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+                    "header header header header"
+                    "main main main aside"
+                    "main main main aside"
+                    "footer footer footer footer";
+    grid-template-rows: 0.2fr 1fr 1fr .1fr;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.header{
+    grid-area: header;
+    background: red;
+    max-height: 100px;
+}
+.cuerpo{
+    grid-area: main;
+    background: bisque;
+}
+.aside{
+    grid-area: aside;
+    background: blue;
+}
+.footer{
+    grid-area: footer;
+    background: #0c8;
+    max-height: 80px;
+}
