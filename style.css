@@ -15,8 +15,7 @@ body{
                     "main main main aside"
                     "footer footer footer footer";
     grid-template-rows: 0.2fr 1fr 1fr .1fr;
-    grid-template-columns: repeat(4, 1fr);
-    
+    grid-template-columns: 1fr 1fr 1fr .7fr;    
 }
 .header{
     grid-area: header;
@@ -35,4 +34,23 @@ body{
     grid-area: footer;
     background: #0c8;
     max-height: 80px;
+}
+
+.imagen{
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .articulo{
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+                        "header header header header"
+                        "main main main main"
+                        "aside aside aside aside"
+                        "footer footer footer footer";
+        grid-template-rows: 0.2fr 1fr 1fr .1fr;
+        grid-template-columns: 1fr 1fr 1fr .7fr;
+        
+    }
 }
