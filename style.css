@@ -1,56 +1,212 @@
 *{
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body{
-    height: 100vh;
+    
 }
 .articulo{
-    height: 100vh;
     display: grid;
     grid-template-areas: 
+                    "nav nav nav nav"
                     "header header header header"
+                    "encabezado encabezado encabezado aside"
                     "main main main aside"
                     "main main main aside"
+                    "main main main aside"
+                    "virtudes virtudes virtudes virtudes"
                     "footer footer footer footer";
-    grid-template-rows: 0.2fr 1fr 1fr .1fr;
-    grid-template-columns: 1fr 1fr 1fr .7fr;    
+    /*grid-template-rows: 0.2fr 0.2fr 1fr 1fr .1fr; */
+    grid-template-columns: 1fr 1fr 1fr .8fr;     
 }
+
+.encabezado{
+    display: inline-flex;
+    grid-area: nav;
+    background: #1f75ffde;
+    box-shadow: 0 5px 7px 0 #1f75ffde;
+}
+
+.encabezado__nombre{
+    width: 40%;
+    padding: 1% 0;
+}
+
+.nombre-empresa{
+    text-align: center;
+    font-family: 'Orelega One', cursive;
+}
+
+.div-nav{
+    width: 100%;
+}
+
+.nav {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    font-size: 120%;
+    font-family: 'Orelega One', cursive;;
+}
+
+.nav__ul {
+    display: flex; 
+    justify-content: space-around;
+}
+
+.nav__li{
+    padding: 10px 17px;
+    list-style: none;
+}
+
+.nav__li i{
+    padding-right: 5px;
+}
+.nav__li a{
+    text-decoration: none;
+}
+
 .header{
+    padding: 2% 7%;
     grid-area: header;
-    background: red;
     max-height: 100px;
+    background-image: url(images/plaqueta.webp);
 }
+
+.primer-parrafo{
+    grid-area: encabezado;
+    padding-left: 9%;
+}
+
 .cuerpo{
     grid-area: main;
     background: bisque;
 }
-.aside{
-    grid-area: aside;
-    background: blue;
+.cuerpo__texto{
+    padding: 3% 7% 2% 9%;
 }
+
+h3{
+    padding: 7px 0;
+    font-family: Georgia, 'Times New Roman';
+    font-size: 30px;
+}
+
+.cuerpo__contenido{
+    padding: 10px;
+}
+
+.cuerpo__contenido p{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.virtudes{
+    grid-area: virtudes;
+    display: flex;
+    flex-direction: row;
+    padding: 0 6% 2% 8%;
+}
+
+.virtudes__elemento{
+    padding: 0 10px;
+    margin: 0 5px;
+    border: 1px transparent #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0 #000;
+    transition: all 0.3s;  
+}
+
+.virtudes__elemento:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 9px 0 #000;
+}
+
+.virtudes__elemento-frase{
+    padding: 5px;
+    text-align: center;
+}
+
+h5{
+    font-family: Georgia, 'Times New Roman';
+    font-size: 25px;
+    padding-bottom: 3px;
+}
+
+.virtudes__elemento-frase p{
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.div__aside{
+    grid-area: aside;
+    padding: 0 30px;
+    background-image: url(images/plaqueta.webp);
+}
+
+.aside{
+    display: inline-block;
+    position: sticky;
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    top: 10%;
+    margin-bottom: 30px;
+   
+}
+
+.aside__titulo{
+    padding: 7px 0;
+    font-family: Georgia, 'Times New Roman';
+    font-size: 25px;
+}
+
+.aside__li{
+    padding: 7px 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.aside__a{
+    text-decoration: none;
+}
+
 .footer{
     grid-area: footer;
     background: #0c8;
     max-height: 80px;
 }
 
-.imagen{
-    width: 100%;
+.formulario__campo{
+
+}
+
+.textarea{
+    resize: none;
 }
 
 @media screen and (max-width: 500px) {
     .articulo{
-        height: 100vh;
+        /*height: 100vh; */
         display: grid;
         grid-template-areas: 
+                        "nav nav nav nav"
                         "header header header header"
                         "main main main main"
                         "aside aside aside aside"
                         "footer footer footer footer";
-        grid-template-rows: 0.2fr 1fr 1fr .1fr;
-        grid-template-columns: 1fr 1fr 1fr .7fr;
-        
+        /*grid-template-rows: 0.2fr 0.2fr 1fr 1fr .1fr; */
+        grid-template-columns: 1fr 1fr 1fr .7fr;  
     }
+
+    .nav__ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }
