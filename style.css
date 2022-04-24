@@ -5,15 +5,14 @@
 }
 
 body{
-    
+    min-width: 405px;
 }
+
 .articulo{
     display: grid;
     grid-template-areas: 
                     "nav nav nav nav"
                     "header header header header"
-                    "encabezado encabezado encabezado aside"
-                    "main main main aside"
                     "main main main aside"
                     "main main main aside"
                     "virtudes virtudes virtudes virtudes"
@@ -22,11 +21,18 @@ body{
     grid-template-columns: 1fr 1fr 1fr .8fr;     
 }
 
+.titulo{
+    padding: 7px 0;
+    font-family: Georgia, 'Times New Roman';
+    font-size: 60px;
+    
+    color: #ff2;
+}
+
 .encabezado{
     display: inline-flex;
     grid-area: nav;
-    background: #1f75ffde;
-    box-shadow: 0 5px 7px 0 #1f75ffde;
+    background: rgb(54, 54, 54);
 }
 
 .encabezado__nombre{
@@ -37,6 +43,11 @@ body{
 .nombre-empresa{
     text-align: center;
     font-family: 'Orelega One', cursive;
+    color: #fff;
+}
+
+.nav__li a{
+    color: #fff;
 }
 
 .div-nav{
@@ -48,7 +59,8 @@ body{
     padding: 10px;
     width: 100%;
     font-size: 120%;
-    font-family: 'Orelega One', cursive;;
+    font-family: 'Orelega One', cursive;
+    text-align: right;
 }
 
 .nav__ul {
@@ -71,18 +83,11 @@ body{
 .header{
     padding: 2% 7%;
     grid-area: header;
-    max-height: 100px;
     background-image: url(images/plaqueta.webp);
-}
-
-.primer-parrafo{
-    grid-area: encabezado;
-    padding-left: 9%;
 }
 
 .cuerpo{
     grid-area: main;
-    background: bisque;
 }
 .cuerpo__texto{
     padding: 3% 7% 2% 9%;
@@ -99,7 +104,7 @@ h3{
 }
 
 .cuerpo__contenido p{
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -107,12 +112,14 @@ h3{
     grid-area: virtudes;
     display: flex;
     flex-direction: row;
-    padding: 0 6% 2% 8%;
+    padding: 2% 6% 2% 8%;
+    background: #bbb;
 }
 
 .virtudes__elemento{
     padding: 0 10px;
     margin: 0 5px;
+    background: #fff;
     border: 1px transparent #000;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0 #000;
@@ -143,6 +150,7 @@ h5{
 
 .div__aside{
     grid-area: aside;
+    margin-bottom: 30px;
     padding: 0 30px;
     background-image: url(images/plaqueta.webp);
 }
@@ -175,38 +183,162 @@ h5{
     text-decoration: none;
 }
 
-.footer{
+.pie{
     grid-area: footer;
-    background: #0c8;
-    max-height: 80px;
+    background: rgb(54, 54, 54);
+    padding: 7%;
+}
+
+.div-formulario{
+    border: 5px solid #fff;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.div-formulario__form{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formulario__img{
+    border-radius: 50%;
+    background: #fff;
+}
+
+.img-mail{
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.div-formulario__campos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .formulario__campo{
+    margin: 1% 0;
+}
 
+.formulario__titulo{
+    color: #fff;
 }
 
 .textarea{
     resize: none;
 }
 
-@media screen and (max-width: 500px) {
+.footer{
+    color: #fff;
+    margin: 40px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Estilos únicos de "Otros proyectos"*/
+.servicio{
+    font-size: 23px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.proximamente{
+    width: 100%;
+    height: 150px;
+    padding: 2% 6% 2% 12%;
+    background: #bbb;
+}
+
+/* Animación para "Otros proyectos": */
+
+.animacion{
+    display: inline-block;
+    position: relative;
+    margin: 2px 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #000;
+    animation-name: desplazamiento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+.circulo-1{
+    background-color: #f00;
+    animation-delay: 80ms;
+}
+
+.circulo-2{
+    background-color: #ee0;
+    animation-delay: 40ms;
+    
+}
+
+.circulo-3{
+    background-color: #0f0;
+    
+}
+
+@keyframes desplazamiento{
+    0%{
+        left: 33%;
+    }
+    100%{
+        left: 53%;
+    }
+}
+
+@media screen and (max-width: 750px) {
     .articulo{
-        /*height: 100vh; */
         display: grid;
         grid-template-areas: 
                         "nav nav nav nav"
                         "header header header header"
-                        "main main main main"
                         "aside aside aside aside"
+                        "main main main main"
+                        "virtudes virtudes virtudes  virtudes"
                         "footer footer footer footer";
         /*grid-template-rows: 0.2fr 0.2fr 1fr 1fr .1fr; */
         grid-template-columns: 1fr 1fr 1fr .7fr;  
+    }
+
+    .encabezado__nombre{
+        width: 60%;
+        padding-top: 50px;
+        padding-left: 40px;
     }
 
     .nav__ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    /*.div__aside{
+        width: 60%;
+    }*/
+
+    .virtudes{
+        grid-area: virtudes;
+        flex-direction: column;
+        /*padding: 0 6% 2% 8%;*/
+    }
+
+    .virtudes__elemento{
+        margin-top: 15px;
+    }
+
+    .aside{
+        position: static;
+        width: 100%;
+        text-align: center;
+        background: #ff2;
     }
 
 }
