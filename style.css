@@ -56,7 +56,7 @@ body{
 
 .nav {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 1.5%;
     width: 100%;
     font-size: 120%;
     font-family: 'Orelega One', cursive;
@@ -193,21 +193,29 @@ h5{
     border: 5px solid #fff;
     border-radius: 15px;
     padding: 3%;
+    text-align: center;
 }
 
 .div-formulario__form{
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .formulario__img{
     border-radius: 50%;
     background: #fff;
+    margin:0 1%;
+}
+
+.formulario__img div{
+    margin: 40px;
+
 }
 
 .img-mail{
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: #fff;
 }
 
@@ -216,10 +224,21 @@ h5{
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0 20px;
+    width: 60%;
 }
 
 .formulario__campo{
-    margin: 1% 0;
+    margin: 2% 0;
+    padding: 5px 2px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #2c7;
+    color: #fff;
+}
+.formulario__campo:focus{
+    background: #222;
+    border-bottom: 3px solid #2a7;
 }
 
 .formulario__titulo{
@@ -228,6 +247,7 @@ h5{
 
 .textarea{
     resize: none;
+    min-height: 100px;
 }
 
 .footer{
@@ -236,6 +256,8 @@ h5{
     text-align: center;
     font-size: 20px;
 }
+
+
 
 /* Estilos únicos de "Otros proyectos"*/
 .servicio{
@@ -367,6 +389,9 @@ h5{
 
 @media screen and (min-width: 800px){
     .sobre-nos{
-        height: 20vh;
+        height: 45vh;
+    }
+    .nav__li a {
+        font-size: 130%;
     }
 }
