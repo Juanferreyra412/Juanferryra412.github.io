@@ -233,12 +233,21 @@ h5{
     background: transparent;
     outline: none;
     border: none;
-    border-bottom: 3px solid #2c7;
     color: #fff;
 }
+
+.formulario__campo-correcto{
+    border-bottom: 3px solid #2c7;
+    background: transparent;
+}
+
+.formulario__campo-incorrecto{
+    border-bottom: 3px solid #f00;
+    background: transparent;
+}
+
 .formulario__campo:focus{
     background: #222;
-    border-bottom: 3px solid #2a7;
 }
 
 .formulario__titulo{
@@ -257,8 +266,31 @@ h5{
     font-size: 20px;
 }
 
+.div-formulario__correcto{
+    display: none;
+}
 
+.div-formulario__incorrecto{
+    display: block;
+    border: 3px solid #f00;
+    border-radius: 10px;
+    padding: 3%;
+    color: #fff;
+    text-align: center;
+}
 
+.div-formulario__no-enviado{
+    display: none;
+}
+
+.div-formulario__enviado{
+    display: block;
+    border: 3px solid #2c7;
+    border-radius: 10px;
+    padding: 3%;
+    color: #fff;
+    text-align: center;
+}
 /* Estilos únicos de "Otros proyectos"*/
 .servicio{
     font-size: 23px;

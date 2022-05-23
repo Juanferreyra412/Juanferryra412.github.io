@@ -151,17 +151,23 @@
         <div class="pie">
             <div class="div-formulario">
                 <h3 id="contacto" class="formulario__titulo">Formulario de contacto</h3>
-                <form class="div-formulario__form">
+                <form class="div-formulario__form" id="formulario">
                     <div class="formulario__img">
                         <div>
                             <img src="images/mail-img.png" class="img-mail">
                         </div>                        
                     </div>
                     <div class="div-formulario__campos">
-                        <input class="formulario__campo" type="email" name="" placeholder="Ingrese su mail aquí">
-                        <input class="formulario__campo" type="text" name="" placeholder="Ingrese el asunto">
-                        <textarea class="formulario__campo textarea" name="" placeholder="Escriba su mensaje"></textarea>
-                        <input class="formulario__campo" type="submit"></input>
+                        <input class="formulario__campo formulario__campo-correcto" type="email" name="mail" id="correo" placeholder="Ingrese su mail aquí">
+                        <input class="formulario__campo formulario__campo-correcto" type="text" name="asunto" id="asunto" placeholder="Ingrese el asunto">
+                        <textarea class="formulario__campo formulario__campo-correcto textarea" name="text" id="txtarea" placeholder="Escriba su mensaje"></textarea>
+                        <input class="formulario__campo formulario__campo-correcto" type="submit"></input>
+                    </div>
+                    <div class="div-formulario__correcto" id="aviso-formulario">
+                        <p>Por favor completar correctamente el formulario.</p>
+                    </div>
+                    <div class="div-formulario__no-enviado" id="aviso-enviado">
+                        <p>Formulario enviado correctamente.</p>
                     </div>
                 </form>
             </div>
@@ -173,6 +179,6 @@
 
         
 
-
+<script src="js/formulario.js"></script>
 </body>
 </html>
