@@ -17,7 +17,6 @@ body{
                     "main main main aside"
                     "virtudes virtudes virtudes virtudes"
                     "footer footer footer footer";
-    /*grid-template-rows: 0.2fr 0.2fr 1fr 1fr .1fr; */
     grid-template-columns: 1fr 1fr 1fr .8fr;     
 }
 
@@ -44,6 +43,7 @@ body{
     text-align: center;
     font-family: 'Orelega One', cursive;
     color: #fff;
+    margin-top: 15px;
 }
 
 .nav__li a{
@@ -211,7 +211,6 @@ h5{
 
 .formulario__img div{
     margin: 40px;
-
 }
 
 .img-mail{
@@ -291,6 +290,7 @@ h5{
     color: #fff;
     text-align: center;
 }
+
 /* Estilos únicos de "Otros proyectos"*/
 .servicio{
     font-size: 23px;
@@ -377,7 +377,6 @@ h5{
                         "main main main main"
                         "virtudes virtudes virtudes  virtudes"
                         "footer footer footer footer";
-        /*grid-template-rows: 0.2fr 0.2fr 1fr 1fr .1fr; */
         grid-template-columns: 1fr 1fr 1fr .7fr;  
     }
 
@@ -387,20 +386,19 @@ h5{
         padding-left: 40px;
     }
 
+    .nombre-empresa{
+        margin-top: 0;
+    }
+
     .nav__ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    /*.div__aside{
-        width: 60%;
-    }*/
-
     .virtudes{
         grid-area: virtudes;
         flex-direction: column;
-        /*padding: 0 6% 2% 8%;*/
     }
 
     .virtudes__elemento{
