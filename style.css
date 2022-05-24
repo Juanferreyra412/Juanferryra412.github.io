@@ -5,7 +5,8 @@
 }
 
 body{
-    min-width: 405px;
+    /*min-width: 405px;
+*/
 }
 
 .articulo{
@@ -24,7 +25,6 @@ body{
     padding: 7px 0;
     font-family: Georgia, 'Times New Roman';
     font-size: 60px;
-    
     color: #ff2;
 }
 
@@ -434,5 +434,26 @@ h5{
         100%{
             left: 52%;
         }
+    }
+}
+
+@media screen and (max-width: 450px){
+    @keyframes desplazamiento{
+        0%{
+            left: 20%;
+        }
+        100%{
+            left: 52%;
+        }
     }   
+    .titulo{
+        padding: 7px 0;
+        font-family: Georgia, 'Times New Roman';
+        font-size: 150%;
+        color: #ff2;
+        text-align: center;
+    } 
+    .encabezado{
+        font-size: 60%;
+    }  
 }
