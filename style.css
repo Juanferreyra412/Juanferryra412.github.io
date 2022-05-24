@@ -449,11 +449,11 @@ h5{
     .titulo{
         padding: 7px 0;
         font-family: Georgia, 'Times New Roman';
-        font-size: 150%;
+        font-size: 180%;
         color: #ff2;
         text-align: center;
     } 
     .encabezado{
-        font-size: 60%;
+        font-size: 70%;
     }  
 }
